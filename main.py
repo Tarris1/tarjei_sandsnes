@@ -51,22 +51,30 @@ def write_section(data):
         st.write(text)
 
 def write_CV(df):
+    st.write('<p style="font-size:36px; font-weight:700; margin-bottom:0px; text-decoration: underline;">Experience</p>',unsafe_allow_html=True)
+    education_written = False
     for index, row in df.iterrows():
-        header = '<p style="font-size:16px; font-weight:700; margin-bottom:5px;">' + row["header"]
+        header = '<p style="font-size:28px; font-weight:700; margin-bottom:0px; color:darkred;">' + row["header"]
         if row["company"]: header += " - " + row["company"] + "</p>"
         else: header += "</p>"
+        period = str(row["from"].month_name()) + " " + str(row["from"].year) + " - " + str(row["to"].month_name()) + " " + str(row["to"].year)
         if row["subheader"]: 
-            subheader = '<p style="font-size:12px";>' + str(row["subheader"]) + "</p>"
+            subheader = '<p style="font-size:20px; margin-bottom:0px;">' + str(row["subheader"]) + "</p>"
         else: subheader = ""
+        skills = "Key skills: " + row["skills"]
+        if row["type"]=="education" and education_written == False:
+            st.write('<p style="font-size:36px; font-weight:700; margin-bottom:0px; text-decoration: underline;">Education</p>',unsafe_allow_html=True)
+            education_written = True
         st.write(header, unsafe_allow_html=True)
         if subheader: st.write(subheader, unsafe_allow_html=True)
+        st.write(period)
         st.write(row["description"], unsafe_allow_html=True)
+        st.write(skills)
 
 def main():
     st.write("# Welcome to my home page! ")
     CV, projects, personal = st.tabs(["Curriculum Vitae", "Projects", "Personal"])
     with CV:
-        st.header("Tarjei Sandsnes")
         #write_section(read_json("CV_sections/masters.json"))
         df = read_excel("CV_sections/CV_main.xlsx")
         write_CV(df[0])
