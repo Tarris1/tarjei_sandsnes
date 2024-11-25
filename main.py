@@ -47,7 +47,7 @@ def write_CV(df):
         st.write(skills)
 
 def create_urls():
-    urls = [{"label":"https://www.linkedin.com/in/tarjei-sandsnes/", "url":True, "icon":"https://content.linkedin.com/content/dam/me/brand/en-us/brand-home/logos/01-dsk-e8-v2.png/jcr:content/renditions/01-dsk-e8-v2-2x.png"},
+    urls = [{"label":"https://www.linkedin.com/in/tarjei-sandsnes/", "url":True, "icon":"https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"},
             {"label":"https://github.com/Tarris1", "url":True, "icon":"https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"}, {"label":"https://www.goodreads.com/tarjei_sandsnes","url":True, "icon":"https://upload.wikimedia.org/wikipedia/commons/5/5a/Goodreads_logo_-_SuperTinyIcons.svg"}
             #,{"label":"tarjei_sandsnes@outlook.com","url":False}, {"label":"+47 483 95 603", "url":False}
             ]
@@ -57,15 +57,15 @@ def create_urls():
         st.write('<p style="margin-bottom:0px;">'+text+"</p>", unsafe_allow_html=True)
 
 def create_header():
-    col1, col2, col3 = st.columns([4, 2, 1])
-    with col1: 
+    intro, picture, links = st.columns([8, 1, 1])
+    with intro: 
         st.markdown('<p style = "font-size:40px;">Welcome!</p>', unsafe_allow_html=True)
-    with col2: 
+    with picture: 
         st.image("TS.jpg", width=300)  # Adjust the width as needed
-    with col3: create_urls()
+    with links: create_urls()
 
 def main():
-    st.set_page_config(layout="wide")
+    st.set_page_config(layout="wide", page_title="Tarjei's Page")
     create_header()
     CV, projects, personal = st.tabs(["Curriculum Vitae", "Projects", "Personal"])
     with CV:
