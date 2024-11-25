@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="34" uniqueCount="29"><si><t>from</t></si><si><t>to</t></si><si><t>skills</t></si><si><t xml:space="preserve">Career Break/Private Projects </t></si><si><t>location</t></si><si><t>subheader</t></si><si><t>header</t></si><si><t>description</t></si><si><t>Analyst</t></si><si><t>company</t></si><si><t>N/A</t></si><si><t>Protector Insurance ASA</t></si><si><t>Oslo, Norway</t></si><si><t>Paris, France</t></si><si><t>type</t></si><si><t>work</t></si><si><t>education</t></si><si><t>University of St. Gallen</t></si><si><t>Master of Arts (M.A.), Banking &amp;  Finance</t></si><si><t>St. Gallen, Switzerland</t></si><si><t>University of Oslo (UIO)</t></si><si><t>Single Course Student, Economics/Law</t></si><si><t>Fall 2015: Economic Growth (ECON2915), Resource Allocation and Economic Policy (ECON3610), Macroeconomic analysis (ECON2310)
+ 
+Spring 2016: English Law of Contract (JUR1260) &amp; Privacy and Data Protection (JUR1630)</t></si><si><t>BI Norwegian Business School</t></si><si><t>Bachelor of Arts (B.A.), Finance</t></si><si><t>- Creation of a literature platform with extensive tracking tools, consisting of over 60,000 authors and 300,000 texts from Wikidata (Wikipedia’s database)
+   - Frontend: ReactJS, CSS, HTML
+   - Backend: Python (fastAPI, Pandas, numpy, etc.) PostgreSQL, SPARQL (to extract data from Wikidata)
+- Transformation of French language skills (A2 → C1)</t></si><si><t>Worked in the Analytics &amp; Reporting (A&amp;R) department, responsible for company’s data warehouse, various reports, and cross-country processes with some of the following responsibilities:
+
+- Transformed company's forecasting/budget model in Excel, significantly improving input quality
+- Lead the forecasting/budgeting process, incl. managing its version control &amp; the comparison model
+- Co-lead forum for company’s controllers ("Controller Forum"): agenda &amp; meeting management, meeting material production, process management, etc.
+- Lead, automated and improved various financial and operational processes
+- Responsible for producing a variety of monthly, quarterly, annual &amp; ad-hoc reports, including claims handling, operating costs, FTEs, etc.
+- Developed BI tools/dashboards in QlikView
+- Designed underlying SQL scripts for company's data warehouse &amp; data marts
+- Documented reports, data tables, data models, company processes, etc., in Confluence to
+raise their visibility and understanding through the organization
+
+Distinction: Employee of the year 2021 (award to top 10% performers)</t></si><si><t>Ranked #6 top finance pre-experience program by Financial Times in 2018
+- Master's thesis: "Analysis of Economic Composite Indexes - Robustness and Relevance for Practice"
+- Exchange at Tsinghua University in Beijing
+- Intense financial modelling in Singapore (Private Equity course)
+- Learned R &amp; VBA programming for data &amp; econometric analysis</t></si><si><t>- Exchange at Hong Kong University of Science &amp; Technology (HKUST) in Hong Kong</t></si></sst>

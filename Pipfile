@@ -9,9 +9,10 @@ pandas = "*"
 watchdog = "*"
 sqlalchemy = "*"
 python-dotenv = "*"
-numpy = "*"
 psycopg2-binary = "*"
 requests = "*"
+xmltodict = "*"
+numpy = "*"
 
 [dev-packages]
 
