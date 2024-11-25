@@ -21,28 +21,39 @@ def read_excel(url):
     return [pd.read_excel(url, sheet_name=i).replace(np.nan, None) for i in sheet_names]
 
 def write_CV(df):
-    st.write('<p style="font-size:36px; font-weight:700; margin-bottom:0px; text-decoration: underline;">Experience</p>',unsafe_allow_html=True)
+    education_format = "font-size:36px; font-weight:700; margin-bottom:0px; text-decoration: underline;"
     education_written = False
+    header_format = "font-size:28px; font-weight:700; margin-bottom:0px; color:darkred;"
+    subheader_format = "font-size:20px; margin-bottom:0px;"
+    period_format = "margin-bottom:0px; font-style:italic;"
+    st.write(f'<p style="{education_format}">Experience</p>',unsafe_allow_html=True)
     for index, row in df.iterrows():
-        header = '<p style="font-size:28px; font-weight:700; margin-bottom:0px; color:darkred;">' + row["header"]
+        header = f'<p style="{header_format}">' + row["header"]
         if row["company"]: header += " - " + row["company"] + "</p>"
         else: header += "</p>"
-        period = str(row["from"].month_name()) + " " + str(row["from"].year) + " - " + str(row["to"].month_name()) + " " + str(row["to"].year)
+        period_text = str(row["from"].month_name()) + " " + str(row["from"].year) + " - " + str(row["to"].month_name()) + " " + str(row["to"].year)
+        period = f'<p style="{period_format}">{period_text}</p>'
         if row["subheader"]: 
-            subheader = '<p style="font-size:20px; margin-bottom:0px;">' + str(row["subheader"]) + "</p>"
+            subheader = f'<p style="{subheader_format}">' + str(row["subheader"]) + "</p>"
         else: subheader = ""
         skills = "Key skills: " + row["skills"]
         if row["type"]=="education" and education_written == False:
-            st.write('<p style="font-size:36px; font-weight:700; margin-bottom:0px; text-decoration: underline;">Education</p>',unsafe_allow_html=True)
+            st.write(f'<p style="{education_format}">{"Education"}</p>',unsafe_allow_html=True)
             education_written = True
         st.write(header, unsafe_allow_html=True)
         if subheader: st.write(subheader, unsafe_allow_html=True)
-        st.write(period)
+        st.write(period, unsafe_allow_html=True)
         st.write(row["description"], unsafe_allow_html=True)
         st.write(skills)
 
+def create_header():
+    col1, col2 = st.columns([4, 1])
+    with col1: 
+        st.markdown('<p style = "font-size:40px;">Welcome!</p>', unsafe_allow_html=True)
+    with col2: st.image("TS.jpg", width=200)  # Adjust the width as needed
+
 def main():
-    st.write('<p>Welcome! <img src="TS.jpg"></p>', unsafe_allow_html=True)
+    create_header()
     CV, projects, personal = st.tabs(["Curriculum Vitae", "Projects", "Personal"])
     with CV:
         df = read_excel("CV_sections/CV_main.xlsx")
