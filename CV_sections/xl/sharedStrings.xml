@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="39" uniqueCount="34"><si><t>from</t></si><si><t>to</t></si><si><t>skills</t></si><si><t xml:space="preserve">Career Break/Private Projects </t></si><si><t>location</t></si><si><t>subheader</t></si><si><t>header</t></si><si><t>description</t></si><si><t>Analyst</t></si><si><t>company</t></si><si><t>N/A</t></si><si><t>Protector Insurance ASA</t></si><si><t>Oslo, Norway</t></si><si><t>Paris, France</t></si><si><t>type</t></si><si><t>work</t></si><si><t>education</t></si><si><t>University of St. Gallen</t></si><si><t>Master of Arts (M.A.), Banking &amp;  Finance</t></si><si><t>St. Gallen, Switzerland</t></si><si><t>University of Oslo (UIO)</t></si><si><t>Single Course Student, Economics/Law</t></si><si><t>Fall 2015: Economic Growth (ECON2915), Resource Allocation and Economic Policy (ECON3610), Macroeconomic analysis (ECON2310)
- 
-Spring 2016: English Law of Contract (JUR1260) &amp; Privacy and Data Protection (JUR1630)</t></si><si><t>BI Norwegian Business School</t></si><si><t>Bachelor of Arts (B.A.), Finance</t></si><si><t>Worked in the Analytics &amp; Reporting (A&amp;R) department, responsible for company’s data warehouse, various reports, and cross-country processes with some of the following responsibilities:
-
-- Transformed company's forecasting/budget model in Excel, significantly improving input quality
-- Lead the forecasting/budgeting process, incl. managing its version control &amp; the comparison model
-- Co-lead forum for company’s controllers ("Controller Forum"): agenda &amp; meeting management, meeting material production, process management, etc.
-- Lead, automated and improved various financial and operational processes
-- Responsible for producing a variety of monthly, quarterly, annual &amp; ad-hoc reports, including claims handling, operating costs, FTEs, etc.
-- Developed BI tools/dashboards in QlikView
-- Designed underlying SQL scripts for company's data warehouse &amp; data marts
-- Documented reports, data tables, data models, company processes, etc., in Confluence to
-raise their visibility and understanding through the organization
-
-Distinction: Employee of the year 2021 (award to top 10% performers)</t></si><si><t>- Exchange at Hong Kong University of Science &amp; Technology (HKUST) in Hong Kong</t></si><si><t>- Creation of a literature platform with extensive tracking tools, consisting of over 60,000 authors and 300,000 texts from Wikidata (Wikipedia’s database)
-   - Frontend: ReactJS, CSS, HTML
-   - Backend: Python (fastAPI, Pandas, numpy, etc.), PostgreSQL, SPARQL (to extract data from Wikidata)
-- Transformation of French language skills (A2 → C1)</t></si><si><t>React, Python, API development, SQL</t></si><si><t>Data privacy law, economics</t></si><si><t>Ranked #6 top finance pre-experience program by Financial Times in 2018
-- Master's thesis: "Analysis of Economic Composite Indexes - Robustness and Relevance for Practice"
-- Exchange at Tsinghua University in Beijing
-- Intense financial modeling in Singapore (Private Equity course)
-- Learned R &amp; VBA programming for data &amp; econometric analysis</t></si><si><t>Financial modeling, data analysis, econometrics, indexing</t></si><si><t>Financial modeling, econometrics, Excel</t></si><si><t>Data analysis, process management, data warehousing, dashboarding, SQL, Python, Excel, slide deck production, reporting</t></si></sst>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="50" uniqueCount="25"><si><t>technical_skills</t></si><si><t>languages</t></si><si><t>Python: fastAPI, Flask Pandas, numpy, SQLAlchemy, etc.</t></si><si><t>QlikView</t></si><si><t>Excel (incl. VBA &amp; PowerQuery)</t></si><si><t>PowerPoint &amp; Word</t></si><si><t>Git &amp; GitHub</t></si><si><t>ReactJS, HTML &amp; CSS</t></si><si><t>SQL: MSSQL &amp; PostgreSQL</t></si><si><t>JIRA &amp; Agile methodology</t></si><si><r><t xml:space="preserve">Norway: </t></r><r><rPr><sz val="9.5"/><color theme="1"/><rFont val="Arial"/><family val="2"/></rPr><t>Mother tongue</t></r></si><si><r><t xml:space="preserve">English: </t></r><r><rPr><sz val="9.5"/><color theme="1"/><rFont val="Arial"/><family val="2"/></rPr><t>Bilingual</t></r></si><si><r><t>French:</t></r><r><rPr><sz val="9.5"/><color theme="1"/><rFont val="Arial"/><family val="2"/></rPr><t xml:space="preserve"> C1 (Advanced)</t></r></si><si><r><t xml:space="preserve">German: </t></r><r><rPr><sz val="9.5"/><color theme="1"/><rFont val="Arial"/><family val="2"/></rPr><t>B1 (Intermediate)</t></r></si><si><r><t xml:space="preserve">Chinese: </t></r><r><rPr><sz val="9.5"/><color theme="1"/><rFont val="Arial"/><family val="2"/></rPr><t xml:space="preserve">B1 (Intermediate) </t></r></si><si><r><t xml:space="preserve">Ancient Greek: </t></r><r><rPr><sz val="9.5"/><color theme="1"/><rFont val="Arial"/><family val="2"/></rPr><t>~1.5y education</t></r></si><si><r><t xml:space="preserve">Latin: </t></r><r><rPr><sz val="9.5"/><color theme="1"/><rFont val="Arial"/><family val="2"/></rPr><t>~1y education</t></r></si><si><t>Process management</t></si><si><t>other_experiences</t></si><si><t>Intensive Latin
+Harvard Summer School
+(Cambridge, USA)
+Jun. 2014 – Aug. 2014</t></si><si><t>Intensive French (A2 → B2)
+École Suisse International
+(Paris, France)
+Sep. 2023 – Dec. 2023</t></si><si><t>Detail oriented</t></si><si><t>personal_skills</t></si><si><t>Adaptable</t></si><si><t>Cross-functional communication</t></si></sst>
