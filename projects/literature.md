@@ -30,7 +30,7 @@ Discovering and managing literature is an integral part of any reader's life.  H
 ### Visualizations:
 Examples of how the platform looks like at the moment:
 
-![Homepage](https://github.com/Tarris1/tarjei_sandsnes/tree/main/projects/homepage.png)
+![Homepage](https://raw.githubusercontent.com/Tarris1/tarjei_sandsnes/refs/heads/main/projects/homepage.png)
 
 ---
 
