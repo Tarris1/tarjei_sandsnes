@@ -14,11 +14,12 @@ Discovering and managing literature is an integral part of any reader's life.  H
 ### Key Metrics:
 - **Authors available with a text attached**: 60,868
 - **Total amount of authors**: 791,773
-- **# Texts available**: 295,648
+- **#Texts available**: 295,648
 
 ---
 
 ### Challenges:
+
 1. **Incomplete data**: A significant amount of authors do not have texts attached to them in wikidata, and a significant amount of authors with texts attached to them are incomplete.
 - Plan to supplement text data from other sources (i.e. ISNI)
 2. **Data Quality assurance**: Difficult to ensure that adjustments are accurate.
@@ -29,7 +30,7 @@ Discovering and managing literature is an integral part of any reader's life.  H
 ### Visualizations:
 Examples of how the platform looks like at the moment:
 
-![Homepage](homepage.png)
+![Homepage](https://github.com/Tarris1/tarjei_sandsnes/tree/main/projects/homepage.png)
 
 ---
 

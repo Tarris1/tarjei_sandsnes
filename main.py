@@ -95,7 +95,11 @@ def create_header():
     return lang
 
 def write_projects():
-    projects = ["literature","webpage","pharmaceuticals"]
+    projects = {"Lectura": "literature.md", #"Sentiment Analysis": "project2.md", #"Recommendation System": "project3.md",
+    }
+    selected_project = st.selectbox("Select a Project", list(projects.keys()))
+    project_md = read_markdown("projects/"+projects[selected_project])
+    st.markdown(project_md, unsafe_allow_html=True)
 
 
 def main():
@@ -106,10 +110,7 @@ def main():
         CV_main = read_excel("CV_sections/CV_main.xlsx")
         CV_skills = read_excel("CV_sections/CV_skills.xlsx")
         write_CV(CV_main[lang], CV_skills[lang], lang)
-    with projects: 
-        st.write("Coming soon!")
-        project_md = read_markdown("projects/literature.md")
-        st.markdown(project_md, unsafe_allow_html=True)
+    with projects: write_projects()
     with personal: st.write("Coming soon!")
     #https://discuss.streamlit.io/t/customizing-the-appearance-of-tabs/48913 #tab formatting
 
