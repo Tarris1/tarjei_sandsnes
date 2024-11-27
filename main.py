@@ -22,6 +22,9 @@ def read_excel(url):
     for i in sheet_names: data_dict[i] = pd.read_excel(url, sheet_name=i).replace(np.nan, None)
     return data_dict
 
+def read_markdown(file_path):
+    with open(file_path, "r") as f: return f.read()
+
 def write_CV(main_data, skills_data, lang):
     def main_section(df,lang):
         headers = {"experience_en":"Experience","experience_fr":"Expériences Professionnels", "education_en":"Education", "education_fr":"Études"}
@@ -33,8 +36,9 @@ def write_CV(main_data, skills_data, lang):
         st.write(f'<p style="{education_format}">{headers["experience_"+lang]}</p>',unsafe_allow_html=True)
         for index, row in df.iterrows():
             header = f'<p style="{header_format}">' + row["header"]
-            if row["company"]: header += " - " + row["company"] + "</p>"
-            else: header += "</p>"
+            if row["company"]: header += " - " + row["company"]
+            else: header = header 
+            header += f' ({row["location"]})</p>'
             period_text = str(row["from"].month_name()) + " " + str(row["from"].year) + " - " + str(row["to"].month_name()) + " " + str(row["to"].year)
             period = f'<p style="{period_format}">{period_text}</p>'
             if row["subheader"]: 
@@ -47,13 +51,13 @@ def write_CV(main_data, skills_data, lang):
             st.write(header, unsafe_allow_html=True)
             if subheader: st.write(subheader, unsafe_allow_html=True)
             st.write(period, unsafe_allow_html=True)
-            st.write(row["description"], unsafe_allow_html=True)
+            if row["description"]: st.write(row["description"], unsafe_allow_html=True)
             st.write(skills)
     def skill_section(skills,lang):
         labels = [{"label_en":"Technical Skills","label_fr":"Compétences Techniques", "data":"technical_skills"}
                     , {"label_en":"Languages","label_fr":"Langues" ,"data":"languages"},
                     {"label_en":"Personal Skills","label_fr":"Compétences Personnelles", "data":"personal_skills"}]#,{"label":"Other Experiences", "data":"other_experiences"}]
-        label_format = '<p style="font-size:24px; font-weight:700; margin-bottom:0px; text-decoration: underline;">'
+        label_format = '<p style="font-size:24px; font-weight:700; margin-bottom:0px; margin-top:5px; text-decoration: underline;">'
         row_format = '<p style="font-size:16px; margin-bottom:0px;">'
         for label in labels:
             st.write(label_format+label["label"+"_"+lang]+"</p>", unsafe_allow_html=True)
@@ -90,15 +94,23 @@ def create_header():
         st.write(header_text[lang].iloc[0]["title"])
     return lang
 
+def write_projects():
+    projects = ["literature","webpage","pharmaceuticals"]
+
+
 def main():
-    st.set_page_config(layout="wide", page_title="Tarjei's Page")
+    st.set_page_config(layout="wide", page_title="Tarjei's Page", page_icon="TS.jpg")
     lang = create_header()
     CV, projects, personal = st.tabs(["Curriculum Vitae", "Projects", "Personal"])
     with CV:
         CV_main = read_excel("CV_sections/CV_main.xlsx")
         CV_skills = read_excel("CV_sections/CV_skills.xlsx")
         write_CV(CV_main[lang], CV_skills[lang], lang)
-    #programming_projects()
+    with projects: 
+        st.write("Coming soon!")
+        project_md = read_markdown("projects/literature.md")
+        st.markdown(project_md, unsafe_allow_html=True)
+    with personal: st.write("Coming soon!")
     #https://discuss.streamlit.io/t/customizing-the-appearance-of-tabs/48913 #tab formatting
 
 if __name__ == "__main__":
