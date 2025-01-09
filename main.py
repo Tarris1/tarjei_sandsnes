@@ -95,7 +95,7 @@ def create_header():
     return lang
 
 def write_projects():
-    projects = {"Lectura": "literature.md", #"Sentiment Analysis": "project2.md", #"Recommendation System": "project3.md",
+    projects = {"Lectura": "literature.md", "Pharmaceuticals": "pharmaceuticals.md", #"Recommendation System": "project3.md",
     }
     selected_project = st.selectbox("Select a Project", list(projects.keys()))
     project_md = read_markdown("projects/"+projects[selected_project])
